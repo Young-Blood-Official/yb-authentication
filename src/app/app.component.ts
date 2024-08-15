@@ -1,3 +1,4 @@
+import { LoginComponent } from './modules/authentication/login/login.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';

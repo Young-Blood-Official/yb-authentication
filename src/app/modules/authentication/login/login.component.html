@@ -1,3 +1,98 @@
-<p class="mt-2">
-  login works!
-</p>
+<div class="blank-layout-container">
+  <div
+    class="position-relative row w-100 h-100 align-items-center justify-content-center"
+  >
+    <div class="col-lg-7 p-0">
+      <div class="image-container h-100">
+        <div
+          class="align-items-center justify-content-center img-height d-lg-flex"
+        >
+          <img
+            src="/assets/images/authentication.svg"
+            alt="login"
+            class="logo"
+            style="max-width: 500px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 p-0">
+      <div
+        class="p-32 d-flex align-items-start align-items-lg-center justify-content-center h-100"
+      >
+        <div class="row justify-content-center w-100">
+          <div class="col-lg-9 max-width-form">
+            <div class="mb-4 align-items-center d-flex flex-column">
+              <h3 class="f-w-700 f-s-24 m-0">Welcome to Young Blood</h3>
+              <span class="f-s-14 d-block mat-body-1 m-t-8"
+                >Sign in to Doashboard</span
+              >
+            </div>
+
+            <form
+              class="m-t-30 needs-validation"
+              [formGroup]="form"
+              (ngSubmit)="submit()"
+            >
+              <div class="mb-4">
+                <label for="username" class="form-label">Username</label>
+                <input
+                  type="username"
+                  class="form-control"
+                  id="username"
+                  formControlName="username"
+                  required
+                  minlength="6"
+                />
+                <div class="text-danger">
+                  @if (form.controls['username'].touched &&
+                  form.controls['username'].errors?.['required']){
+                  <span class="">This is required</span>
+                  } @else if(form.controls['username'].errors?.['minlength']){
+                  <span class="">Min char 6 required</span>
+                  }
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  formControlName="password"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  required
+                />
+                <div class="text-danger">
+                  @if (form.controls['password'].touched &&
+                  form.controls['password'].errors?.['required']){
+                  <span class="">This is required</span>
+                  }
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-4">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Remember this device</label
+                  >
+                </div>
+                <div><a href="">Forgot Password?</a></div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                [disabled]="!form.valid"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
