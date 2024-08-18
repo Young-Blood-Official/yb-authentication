@@ -1,0 +1,10 @@
+{
+  "loginPage": {
+    "username": "Username",
+    "password": "Password",
+    "remember this account": "Remember this account",
+    "forgot Password": "Forgot Password?",
+    "title": "Welcome to Young Blood",
+    "description": "Sign in to Dashboard"
+  }
+}

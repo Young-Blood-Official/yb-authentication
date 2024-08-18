@@ -1,1 +1,12 @@
+<div class="language">
+  <select (change)="changeLanguage($event)" class="form-select">
+    <option
+      *ngFor="let lang of languages | keyvalue"
+      [value]="lang.key"
+      [selected]="lang.key === currentLang"
+    >
+      {{ lang.value }}
+    </option>
+  </select>
+</div>
 <router-outlet />

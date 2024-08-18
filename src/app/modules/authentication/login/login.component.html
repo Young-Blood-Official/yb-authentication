@@ -23,10 +23,12 @@
         <div class="row justify-content-center w-100">
           <div class="col-lg-9 max-width-form">
             <div class="mb-4 align-items-center d-flex flex-column">
-              <h3 class="f-w-700 f-s-24 m-0">Welcome to Young Blood</h3>
-              <span class="f-s-14 d-block mat-body-1 m-t-8"
-                >Sign in to Doashboard</span
-              >
+              <h3 class="f-w-700 f-s-24 m-0">
+                {{ "loginPage.title" | translate }}
+              </h3>
+              <span class="f-s-14 d-block mat-body-1 m-t-8">{{
+                "loginPage.description" | translate
+              }}</span>
             </div>
 
             <form
@@ -35,7 +37,9 @@
               (ngSubmit)="submit()"
             >
               <div class="mb-4">
-                <label for="username" class="form-label">Username</label>
+                <label for="username" class="form-label">{{
+                  "loginPage.username" | translate
+                }}</label>
                 <input
                   type="username"
                   class="form-control"
@@ -54,7 +58,9 @@
                 </div>
               </div>
               <div class="mb-4">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">{{
+                  "loginPage.password" | translate
+                }}</label>
                 <input
                   formControlName="password"
                   type="password"
@@ -76,14 +82,14 @@
                     class="form-check-input"
                     id="exampleCheck1"
                   />
-                  <label class="form-check-label" for="exampleCheck1"
-                    >Remember this device</label
-                  >
+                  <label class="form-check-label" for="exampleCheck1">{{
+                    "loginPage.remember this account" | translate
+                  }}</label>
                 </div>
                 <div>
-                  <a [routerLink]="['/auth/reset-password']" href=""
-                    >Forgot Password?</a
-                  >
+                  <a [routerLink]="['/auth/reset-password']" href="">{{
+                    "loginPage.forgot Password" | translate
+                  }}</a>
                 </div>
               </div>
               <button

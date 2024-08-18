@@ -1,0 +1,10 @@
+{
+  "loginPage": {
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu",
+    "remember this account": "Ghi nhớ tài khoản",
+    "forgot Password": "Quên mật khẩu?",
+    "title": "Chào mừng đến với Young Blood ",
+    "description": "Đăng nhập vào Dashboard"
+  }
+}
