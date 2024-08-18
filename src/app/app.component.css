@@ -1,15 +1,8 @@
 .language {
   position: absolute;
   margin: auto;
-  top: 25vh;
-  right: 40vw;
+  top: 50px;
+  right: 6vw;
   z-index: 2;
   width: 150px;
-}
-
-@media (min-width: 992px) {
-  .language {
-    top: 50px;
-    right: 6vw;
-  }
 }

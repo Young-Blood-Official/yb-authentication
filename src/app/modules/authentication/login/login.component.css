@@ -8,10 +8,10 @@
 .blank-layout-container::before {
   content: " ";
   position: absolute;
-  top: -150px;
-  left: -150px;
-  width: 450px;
-  height: 450px;
+  top: -130px;
+  left: -130px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background-image: linear-gradient(#afe3ff, #ecf2ff);
 }
@@ -21,4 +21,13 @@
 }
 a {
   text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .blank-layout-container::before {
+    top: -150px;
+    left: -150px;
+    width: 450px;
+    height: 450px;
+  }
 }
